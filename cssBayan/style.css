@@ -27,7 +27,7 @@ body{
 }
 .container{
 padding: 3em 4em;
-margin: 2em 0;
+margin: 2em;
 background: #f5efe4;
 }
 .title-text{
@@ -38,6 +38,7 @@ background: #f5efe4;
     padding: 1em 0;
     border-bottom: 1px solid #757067;
     cursor: pointer;
+    transition: all 1s ease-out;
 }
 .accordion-item-img{
     width: 40%;
@@ -46,6 +47,7 @@ background: #f5efe4;
     display: none;
     transition: all 2s;
     padding: 1em;
+    transition: all 1s ease-out;
 
 }
 
@@ -61,22 +63,23 @@ background: #f5efe4;
 }
 .item-img:hover{
     transition: all 0.8s;
+    transform: scale(1.05);
 }
 .item-input{
     appearance: none;
 }
 .item-input:checked + .accordion-item-img{
     display: block;
-    transition: all 1s;
+    transition: all 1s ease-out;
 
 }
 
 .accordion-item-text{
     font-size: 2em;
-    transition: all 0.6s;
     justify-content: space-between;
     align-items: center;
     color: rgb(28, 96, 223);
+    cursor: pointer;
 }
 .accordion-item-text:hover{
     color: rgb(41, 41, 41);
@@ -84,7 +87,7 @@ background: #f5efe4;
 }
 .accordion-item:hover .accordion-item-img{
     display: block;
-    transition: all 1s;
+    transition: all 1s ease-in;
     transform: scale(1.1);
 }
 
