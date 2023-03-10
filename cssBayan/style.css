@@ -14,16 +14,20 @@ ul, ol, li {
 }
 p{
     margin: 0;
+    padding: 0;
 }
 .wrapper{
-    max-width: 1200px;
+    max-width: 60%;
     margin: 0 auto;
 }
 body{
     background: #faf7f1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 .container{
-padding: 50px 60px;
+padding: 3em 4em;
+margin: 2em 0;
 background: #f5efe4;
 }
 .title-text{
@@ -31,7 +35,7 @@ background: #f5efe4;
     font-size: 4em;
 }
 .accordion-item{
-    padding: 15px 0px;
+    padding: 1em 0;
     border-bottom: 1px solid #757067;
     cursor: pointer;
 }
@@ -41,7 +45,7 @@ background: #f5efe4;
     margin: 0 auto;
     display: none;
     transition: all 2s;
-    padding: 10px;
+    padding: 1em;
 
 }
 
@@ -103,12 +107,21 @@ background: #f5efe4;
     .title-text{
         font-size: 3em;
     }
+    .wrapper{
+        max-width: 80%;
+    }
+    .container{
+        margin: 1em 0;
+    }
     .accordion-item-text {
         font-size: 1.4em;}
 }
 @media (max-width: 350px) {
     .container{
-        padding: 15px;
+        padding: 1em;
+    }
+    .wrapper{
+        max-width: 90%;
     }
     .accordion-item-img {
         width: 80%;
