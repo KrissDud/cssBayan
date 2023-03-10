@@ -98,3 +98,28 @@ background: #f5efe4;
     transform: rotate(45deg);
 
 }
+
+@media (max-width: 900px) {
+    .title-text{
+        font-size: 3em;
+    }
+    .accordion-item-text {
+        font-size: 1.4em;}
+}
+@media (max-width: 350px) {
+    .container{
+        padding: 15px;
+    }
+    .accordion-item-img {
+        width: 80%;
+    }
+    .accordion-item-text p{
+        display: block;
+        width: 80%;
+    }
+    .title-text{
+        font-size: 2em;
+    }
+    .accordion-item-text {
+        font-size: 1em;}
+}
