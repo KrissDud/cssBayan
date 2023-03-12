@@ -35,15 +35,14 @@ background: #f5efe4;
     font-size: 4em;
 }
 .accordion-item{
-    padding: 1em 0 0 0;
+    padding: 0 0 1em 0;
     border-bottom: 1px solid #757067;
     cursor: pointer;
-    transition: all 1s ease-out;
+    transition: all 1s;
 }
 .accordion-item-img{
     margin: 0 auto;
     transition: all 2s;
-    transition: all 1s ease-out;
     opacity: 0;
     width: 0;
     height: 0;
@@ -58,21 +57,29 @@ background: #f5efe4;
     width: 100%;
     object-fit: cover;
     transition: all 0.8s;
+    margin-top: 1em;
 }
 .item-img:hover{
     transition: all 0.8s;
-    transform: scale(1.01);
+}
+.accordion-item:active .item-img{
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: all 0.6s;
+}
+.accordion-item:active label .wrapper-text p{
+    color: rgb(28, 96, 223);
+    transition: all 0.6s;
 }
 .item-input{
     appearance: none;
 }
-.item-input:checked + .accordion-item-img{
+.item-input:checked + label .accordion-item-img{
     opacity: 1;
     overflow: visible;
     width: 40%;
     height: auto;
-    transition: all 1s;
-    padding-bottom: 1em;
+    transition: all 2s;
 }
 .accordion-item-text{
     font-size: 2em;
@@ -80,6 +87,13 @@ background: #f5efe4;
     align-items: center;
     color: rgb(28, 96, 223);
     cursor: pointer;
+    display: block;
+}
+.wrapper-text{
+    justify-content: space-between;
+}
+.item-input:checked + .accordion-item-text p{
+    color: rgb(41, 41, 41); 
 }
 .accordion-item-text:hover{
     color: rgb(41, 41, 41);
@@ -92,18 +106,21 @@ background: #f5efe4;
     width: 40%;
     height: auto;
 }
-.accordion-item:hover  .accordion-item-icon{
+.accordion-item:hover .accordion-item-icon{
     transform: rotate(45deg);
     transition: all 1s;
 }
 .wrapper-accordion:hover .accordion-item-icon{
     display: block;
+    transition: all 1s;
 }
 .wrapper-accordion:hover .accordion-item-text{
     color: rgb(41, 41, 41);
+    transition: all 1s;
 }
-.item-input:checked + .accordion-item-icon{
+.item-input:checked + label .accordion-item-icon{
     transform: rotate(45deg);
+    transition: all 1s;
 }
 
 @media (max-width: 900px) {
